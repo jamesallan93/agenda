@@ -15,14 +15,13 @@ import NavBarTop from "@/components/navigation/NavBarTop";
 export default {
   components: {
     AsideBar,
-    NavBarTop
+    NavBarTop,
   },
 
   mounted() {
     document.body.classList.remove("jumbo-page");
     document.body.classList.add("pace-done");
-   
-  }
+  },
 };
 </script>
 

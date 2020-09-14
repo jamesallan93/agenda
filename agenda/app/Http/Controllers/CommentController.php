@@ -13,7 +13,6 @@ class CommentController extends Controller
     {
         $this->request = $request;
         $this->comment = $comment;
-
     }
     public function index()
     {
@@ -32,7 +31,6 @@ class CommentController extends Controller
     {
         $data = $this->request->all();
         $data = $this->comment->where('contact_id', $data['id'])->get();
-//        $data = $this->comment->create($data);
         return response()->json($data);
     }
 

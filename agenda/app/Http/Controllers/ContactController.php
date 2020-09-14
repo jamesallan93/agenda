@@ -11,11 +11,10 @@ class ContactController extends Controller
 
     protected $contact, $request;
 
-    public function __construct( Contact $contact,Request $request)
+    public function __construct(Contact $contact, Request $request)
     {
         $this->request = $request;
         $this->contact = $contact;
-
     }
 
     public function index()
@@ -41,7 +40,6 @@ class ContactController extends Controller
         $data = $this->contact->find(request('id'));
         $x = $this->request->all();
         $data->update($x);
-//        return response()->json($data->fresh());
     }
 
 
